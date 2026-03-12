@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: coppertrade-agent-ai
+    env: docker
+    plan: starter
+    autoDeploy: true
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: OPENAI_MODEL
+        value: gpt-5.4
+      - key: ADMIN_PASSWORD
+        value: admin123
